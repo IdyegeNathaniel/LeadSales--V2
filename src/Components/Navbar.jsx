@@ -12,7 +12,7 @@ const Navbar = ({ isHome = true }) => {
       ? "bg-white text-black py-2 px-3 rounded-md"
       : "py-2 px-3 rounded-md";
   return (
-    <nav className="flex fixed z-50 w-full h-20 px-4 items-center justify-between bg-orange-500 border-b border-b-orange-500">
+    <nav className="flex fixed z-50 w-full h-20 px-4 items-center justify-between bg-orange-500 border-b border-b-orange-300">
       <div className="">
         <img src={Logo} className="w-auto h-40" alt="" />
       </div>
