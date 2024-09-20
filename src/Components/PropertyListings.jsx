@@ -12,6 +12,7 @@ const PropertyListings = ({ isHome = false }) => {
       try {
         const res = await fetch(apiUrl);
         const data = await res.json();
+        console.log(data);
         setProperties(data);
       } catch (error) {
         console.log("Error fetching data", error);

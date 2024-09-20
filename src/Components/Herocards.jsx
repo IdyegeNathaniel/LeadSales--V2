@@ -24,7 +24,7 @@ const Herocards = () => {
               List your properties here and get a suitable sale
             </p>
             <Link
-              to="/add-property"
+              to="/sell-property"
               className="inline-block bg-orange-500 text-white py-4 px-2 rounded-lg hover:bg-orange-400"
             >
               Add Properties

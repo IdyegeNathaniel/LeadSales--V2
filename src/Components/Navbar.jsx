@@ -4,7 +4,7 @@ import Logo from "../assets/images/Logo.png";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { useState } from "react";
 
-const Navbar = () => {
+const Navbar = ({ isHome = true }) => {
   const [nav, setNav] = useState(false);
   const handleClick = () => setNav((prevState) => !prevState);
   const linkClass = ({ isActive }) =>
@@ -12,27 +12,7 @@ const Navbar = () => {
       ? "bg-white text-black py-2 px-3 rounded-md"
       : "py-2 px-3 rounded-md";
   return (
-    // <nav className="bg-orange-500 border-b border-b-orange-400">
-    //   <div className="flex items-center justify-between mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-    //     <NavLink>
-    //       <img src={Logo} alt="Logo" className="w-auto h-20" />
-    //     </NavLink>
-    //     <div className="">
-    //       <div className="hidden md:flex space-x-2 text-white">
-    //         <NavLink to="/" className={linkClass}>
-    //           Home
-    //         </NavLink>
-    //         <NavLink to="/properties" className={linkClass}>
-    //           Properties
-    //         </NavLink>
-    //         <NavLink to="/add-properties" className={linkClass}>
-    //           Sell Property
-    //         </NavLink>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </nav>
-    <nav className="flex fixed z-50 w-full h-20 px-4 items-center justify-between bg-orange-500 border-b border-b-orange-00">
+    <nav className="flex fixed z-50 w-full h-20 px-4 items-center justify-between bg-orange-500 border-b border-b-orange-500">
       <div className="">
         <img src={Logo} className="w-auto h-40" alt="" />
       </div>

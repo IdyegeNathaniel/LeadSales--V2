@@ -1,82 +1,88 @@
 {
-    "properties":  [
-        {
-            "id": "1",
-            "type": "Sales",
-            "title": "A 4-bedroom fully detached apartment",
-            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, unde. Officiis, ea at fuga iste voluptate rerum neque assumenda eius deleniti perspiciatis modi. Sunt aut libero, ipsam facilis qui hic.",
-            "location": "Eko Valley, Lagos",
-            "price": "100M",
-            "company": {
-                "name": "Golden Sage",
-                "contactEmail": "goldensage@outlook.com",
-                "contactNumber": "(234) 70-400-5824"
-            }
-        },
-        {
-            "id": "2",
-            "type": "Rentage",
-            "title": "A 2-bedroom apartment",
-            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, unde. Officiis, ea at fuga iste voluptate rerum neque assumenda eius deleniti perspiciatis modi. Sunt aut libero, ipsam facilis qui hic.",
-            "location": "Lekki Phase-2, Lagos",
-            "price": "70M /Year",
-            "company": {
-                "name": "Golden Sage",
-                "contactEmail": "goldensage@outlook.com",
-                "contactNumber": "(234) 70-400-5824"
-            }
-        },
-        {
-            "id": "3",
-            "type": "Sales",
-            "title": "A 4-bedroom bungalow",
-            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, unde. Officiis, ea at fuga iste voluptate rerum neque assumenda eius deleniti perspiciatis modi. Sunt aut libero, ipsam facilis qui hic.",
-            "location": "Gwarimpa, Abuja",
-            "price": "25M",
-            "company": {
-                "name": "Golden Sage",
-                "contactEmail": "goldensage@outlook.com",
-                "contactNumber": "(234) 70-400-5824"
-            }
-        },
-        {
-            "id": "4",
-            "type": "Distress Sales",
-            "title": "A 3-bedroom fully furnished detached building",
-            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, unde. Officiis, ea at fuga iste voluptate rerum neque assumenda eius deleniti perspiciatis modi. Sunt aut libero, ipsam facilis qui hic.",
-            "location": "Asokoro, Abuja",
-            "price": "100M",
-            "company": {
-                "name": "House-Agent Co-op",
-                "contactEmail": "HAC@outlook.com",
-                "contactNumber": "(234) 70-400-5824"
-            }
-        },
-        {
-            "id": "5",
-            "type": "Rent",
-            "title": "A Service apartment",
-            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, unde. Officiis, ea at fuga iste voluptate rerum neque assumenda eius deleniti perspiciatis modi. Sunt aut libero, ipsam facilis qui hic.",
-            "location": "Eko Atlantica",
-            "price": "50K /Day",
-            "company": {
-                "name": "Golden Sage",
-                "contactEmail": "goldensage@outlook.com",
-                "contactNumber": "(234) 70-400-5824"
-            }
-        },
-        {
-            "id": "6",
-            "type": "Sales",
-            "title": "A 4-bedroom fully detached apartment",
-            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, unde. Officiis, ea at fuga iste voluptate rerum neque assumenda eius deleniti perspiciatis modi. Sunt aut libero, ipsam facilis qui hic.",
-            "location": "Eko Valley",
-            "price": "100M",
-            "company": {
-                "name": "Golden Sage",
-                "contactEmail": "goldensage@outlook.com",
-                "contactNumber": "(234) 70-400-5824"
-            }
-        }
-    ]
+  "properties": [
+    {
+      "id": "1",
+      "type": "Sales",
+      "title": "A 4-bedroom fully detached apartment",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, unde. Officiis, ea at fuga iste voluptate rerum neque assumenda eius deleniti perspiciatis modi. Sunt aut libero, ipsam facilis qui hic.",
+      "location": "Eko Valley, Lagos",
+      "price": "100M",
+      "company": {
+        "name": "Golden Sage",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, unde. Officiis, ea at fuga iste voluptate rerum neque assumenda eius deleniti perspiciatis modi. Sunt aut libero, ipsam facilis qui hic.",
+        "contactEmail": "goldensage@outlook.com",
+        "contactNumber": "(234) 70-400-5824"
+      }
+    },
+    {
+      "id": "2",
+      "type": "Rentage",
+      "title": "A 2-bedroom apartment",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, unde. Officiis, ea at fuga iste voluptate rerum neque assumenda eius deleniti perspiciatis modi. Sunt aut libero, ipsam facilis qui hic.",
+      "location": "Lekki Phase-2, Lagos",
+      "price": "70M /Year",
+      "company": {
+        "name": "Golden Sage",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, unde. Officiis, ea at fuga iste voluptate rerum neque assumenda eius deleniti perspiciatis modi. Sunt aut libero, ipsam facilis qui hic.",
+        "contactEmail": "goldensage@outlook.com",
+        "contactNumber": "(234) 70-400-5824"
+      }
+    },
+    {
+      "id": "3",
+      "type": "Sales",
+      "title": "A 4-bedroom bungalow",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, unde. Officiis, ea at fuga iste voluptate rerum neque assumenda eius deleniti perspiciatis modi. Sunt aut libero, ipsam facilis qui hic.",
+      "location": "Gwarimpa, Abuja",
+      "price": "25M",
+      "company": {
+        "name": "Golden Sage",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, unde. Officiis, ea at fuga iste voluptate rerum neque assumenda eius deleniti perspiciatis modi. Sunt aut libero, ipsam facilis qui hic.",
+        "contactEmail": "goldensage@outlook.com",
+        "contactNumber": "(234) 70-400-5824"
+      }
+    },
+    {
+      "id": "4",
+      "type": "Distress Sales",
+      "title": "A 3-bedroom fully furnished building",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, unde. Officiis, ea at fuga iste voluptate rerum neque assumenda eius deleniti perspiciatis modi. Sunt aut libero, ipsam facilis qui hic.",
+      "location": "Asokoro, Abuja",
+      "price": "$90K - 100K",
+      "company": {
+        "name": "House-Agent Co-op",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, unde. Officiis, ea at fuga iste voluptate rerum neque assumenda eius deleniti perspiciatis modi. Sunt aut libero, ipsam facilis qui hic.",
+        "contactEmail": "HAC@outlook.com",
+        "contactNumber": "(234) 70-400-5824"
+      }
+    },
+    {
+      "id": "5",
+      "type": "Rentage",
+      "title": "A Service apartment",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, unde. Officiis, ea at fuga iste voluptate rerum neque assumenda eius deleniti perspiciatis modi. Sunt aut libero, ipsam facilis qui hic.",
+      "location": "Eko Atlantica",
+      "price": "50K /Day",
+      "company": {
+        "name": "Golden Sage",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, unde. Officiis, ea at fuga iste voluptate rerum neque assumenda eius deleniti perspiciatis modi. Sunt aut libero, ipsam facilis qui hic.",
+        "contactEmail": "goldensage@outlook.com",
+        "contactNumber": "(234) 70-400-5824"
+      }
+    },
+    {
+      "id": "6",
+      "type": "Sales",
+      "title": "A 4-bedroom fully detached apartment",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, unde. Officiis, ea at fuga iste voluptate rerum neque assumenda eius deleniti perspiciatis modi. Sunt aut libero, ipsam facilis qui hic.",
+      "location": "Eko Valley",
+      "price": "100M",
+      "company": {
+        "name": "Golden Sage",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, unde. Officiis, ea at fuga iste voluptate rerum neque assumenda eius deleniti perspiciatis modi. Sunt aut libero, ipsam facilis qui hic.",
+        "contactEmail": "goldensage@outlook.com",
+        "contactNumber": "(234) 70-400-5824"
+      }
+    }
+  ]
 }
