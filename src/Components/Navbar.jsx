@@ -1,68 +1,78 @@
-import { NavLink } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { NavLink, useLocation, Link } from "react-router-dom";
 import Logo from "../assets/images/Logo.png";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-const Navbar = ({ isHome = true }) => {
+const Navbar = () => {
+  const [scrollNav, setScrollNav] = useState(false);
   const [nav, setNav] = useState(false);
-  const handleClick = () => setNav((prevState) => !prevState);
+  const location = useLocation();
+  const isHome = location.pathname === "/";
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollNav(isHome && window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [isHome]);
+
+  const handleClick = () => setNav((prev) => !prev);
+
   const linkClass = ({ isActive }) =>
-    isActive
-      ? "bg-white text-black py-2 px-3 rounded-md"
-      : "py-2 px-3 rounded-md";
+    `py-2 px-3 rounded-md ${isActive ? "bg-white text-black" : ""}`;
+
+  const navbarClass = `flex fixed z-10 w-full h-20 px-4 items-center justify-between ${
+    isHome ? (scrollNav ? "bg-orange-500" : "bg-transparent") : "bg-orange-500"
+  }`;
+
+  const mobileMenuClass = `absolute flex flex-col items-center justify-center top-0 right-0 h-[400px] w-[200px] mt-2 bg-orange-500 ${
+    nav ? "" : "hidden"
+  }`;
+
+  const mobileLinkClass = "py-2 text-xl";
+
   return (
-    <nav className="flex fixed z-50 w-full h-20 px-4 items-center justify-between bg-orange-500 border-b border-b-orange-300">
-      <div className="">
-        <img src={Logo} className="w-auto h-40" alt="" />
+    <nav className={navbarClass}>
+      <div>
+        <img src={Logo} className="w-auto h-40" alt="nav-logo" />
       </div>
       <div className="hidden md:flex font-semibold">
         <ul className="flex">
-          <li>
-            <NavLink to="/" className={linkClass}>
-              {" "}
-              Home{" "}
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/properties" className={linkClass}>
-              Buy Properties
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/sell-property" className={linkClass}>
-              Sell Property
-            </NavLink>{" "}
-          </li>
+          {["Home", "Buy Properties", "Sell Property"].map((item, index) => (
+            <li key={index}>
+              <NavLink
+                to={
+                  index === 0 ? "/" : `/${item.toLowerCase().replace(" ", "-")}`
+                }
+                className={linkClass}
+              >
+                {item}
+              </NavLink>
+            </li>
+          ))}
         </ul>
       </div>
-
-      {/* RESPONSIVE */}
-
       <div
         className="md:hidden text-white z-50 cursor-pointer"
         onClick={handleClick}
       >
-        {!nav ? <FaBars /> : <FaTimes />}
+        {nav ? <FaTimes /> : <FaBars />}
       </div>
-      <ul
-        className={
-          !nav
-            ? "hidden"
-            : "absolute flex flex-col items-center justify-center top-0 right-0 h-[400px] w-[200px] mt-2 bg-orange-500"
-        }
-      >
-        <li className="py-2 text-xl">
-          <Link to="/"> Home </Link>{" "}
-        </li>
-        <li className="py-2 text-xl">
-          {" "}
-          <Link to="/properties">Buy Properties</Link>{" "}
-        </li>
-        <li className="py-2 text-xl">
-          {" "}
-          <Link to="/sell-property">Sell Property</Link>{" "}
-        </li>
+      <ul className={mobileMenuClass}>
+        {["Home", "Buy Properties", "Sell Property"].map((item, index) => (
+          <li key={index} className={mobileLinkClass}>
+            <Link
+              to={
+                index === 0 ? "/" : `/${item.toLowerCase().replace(" ", "-")}`
+              }
+              onClick={handleClick}
+            >
+              {item}
+            </Link>
+          </li>
+        ))}
       </ul>
     </nav>
   );
