@@ -52,7 +52,7 @@ const App = () => {
     createRoutesFromElements(
       <Route path="/" element={<MainLayout />}>
         <Route index element={<HomePage />} />
-        <Route path="/properties" element={<PropertiesPage />} />
+        <Route path="/buy-properties" element={<PropertiesPage />} />
         <Route
           path="/properties/:id"
           element={<PropertyPage deleteProperty={deleteProperty} />}
