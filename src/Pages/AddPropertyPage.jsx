@@ -40,8 +40,8 @@ const AddPropertyPage = ({ addPropertySubmit }) => {
   };
 
   return (
-    <section className="bg-orange-200 ">
-      <div className="container m-auto max-w-2xl py-24">
+    <section className="bg-orange-200 pt-20">
+      <div className="container m-auto max-w-2xl py-20">
         <div className="bg-white py-8 px-6 mb-4 shadow-md rounded-md border m-4 md:m-0">
           <form onSubmit={SubmitForm}>
             <h2 className="text-3xl text-center font-semibold mb-6">

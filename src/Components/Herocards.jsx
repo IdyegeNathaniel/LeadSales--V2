@@ -12,7 +12,7 @@ const Herocards = () => {
               Browse our new propertties and get yourself that desire
             </p>
             <Link
-              to="/properties"
+              to="/buy-properties"
               className="inline-block bg-black text-white py-4 px-2 rounded-lg hover:bg-gray-800"
             >
               Browse Properties

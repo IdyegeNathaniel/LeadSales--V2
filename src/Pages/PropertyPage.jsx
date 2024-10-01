@@ -63,7 +63,7 @@ const PropertyPage = ({ deleteProperty }) => {
       <section className="pt-20">
         <div className="container m-auto py-6 px-6">
           <Link
-            to="/properties"
+            to="/buy-properties"
             className="flex items-center text-orange-600 hover:text-orange-500"
           >
             <FaArrowLeft className="mr-2" />
