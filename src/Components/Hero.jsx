@@ -5,7 +5,7 @@ const Hero = ({
   subtitle = "Buy And Sell Your Properties Here",
 }) => {
   const [backgroundImage, setBackgroundImage] = useState(
-    "url('src/assets/images/BG-LOW.jpg')" // Low-resolution placeholder
+    `url(${process.env.PUBLIC_URL}/assets/images/BG-LOW.jpg)` // Low-resolution placeholder using PUBLIC_URL
   );
   const [isVisible, setIsVisible] = useState(false);
   const heroRef = useRef(null);
@@ -34,9 +34,11 @@ const Hero = ({
   useEffect(() => {
     if (isVisible) {
       const highResImage = new Image();
-      highResImage.src = "src/assets/images/BG.jpg"; // High-resolution image
+      highResImage.src = `${process.env.PUBLIC_URL}/assets/images/BG.jpg`; // High-resolution image using PUBLIC_URL
       highResImage.onload = () => {
-        setBackgroundImage(`url('src/assets/images/BG.jpg')`);
+        setBackgroundImage(
+          `url(${process.env.PUBLIC_URL}/assets/images/BG.jpg)`
+        );
       };
     }
   }, [isVisible]);
