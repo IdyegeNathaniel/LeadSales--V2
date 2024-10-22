@@ -5,12 +5,6 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   server: {
-    proxy: {
-      '/api': {
-        target: 'https://properties-api-ruddy.vercel.app/',
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, ''),
-      }
-    }
+    port: 4000,
   }
 })

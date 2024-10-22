@@ -1,58 +1,18 @@
 import { useEffect, useState, useRef } from "react";
+import bgimage from "../assets/BG.png";
 
 const Hero = ({
   title = "We Are Your Realtors!",
   subtitle = "Buy And Sell Your Properties Here",
 }) => {
-  const [backgroundImage, setBackgroundImage] = useState(
-    `url(${process.env.PUBLIC_URL}/assets/images/BG-LOW.jpg)` // Low-resolution placeholder using PUBLIC_URL
-  );
-  const [isVisible, setIsVisible] = useState(false);
-  const heroRef = useRef(null);
-
-  // Lazy loading logic
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.disconnect(); // Stop observing once the image is loaded
-        }
-      });
-    });
-
-    if (heroRef.current) {
-      observer.observe(heroRef.current);
-    }
-
-    return () => {
-      if (heroRef.current) observer.unobserve(heroRef.current);
-    };
-  }, []);
-
-  // Set the high-quality background image when the component is visible
-  useEffect(() => {
-    if (isVisible) {
-      const highResImage = new Image();
-      highResImage.src = `${process.env.PUBLIC_URL}/assets/images/BG.jpg`; // High-resolution image using PUBLIC_URL
-      highResImage.onload = () => {
-        setBackgroundImage(
-          `url(${process.env.PUBLIC_URL}/assets/images/BG.jpg)`
-        );
-      };
-    }
-  }, [isVisible]);
-
   const backGround = {
-    backgroundImage: backgroundImage,
+    backgroundImage: `url("src/assets/BG.png")`,
     backgroundSize: "cover",
     backgroundPosition: "center",
-    transition: "background-image 0.5s ease-in-out", // Smooth transition
   };
 
   return (
     <div
-      ref={heroRef}
       className="w-full py-40 mb-4 border-b border-b-orange-400"
       style={backGround}
     >

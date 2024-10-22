@@ -8,7 +8,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "server": "json-server --watch src/Properties.json --port 5000"
+    "server": "node server.js"
   },
   "dependencies": {
     "react": "^18.3.1",
