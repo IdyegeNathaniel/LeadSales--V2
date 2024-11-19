@@ -1,12 +1,12 @@
 import { useEffect, useState, useRef } from "react";
-import bgimage from "../assets/BG.png";
+import bgimage from "/assets/BG.png";
 
 const Hero = ({
   title = "We Are Your Realtors!",
   subtitle = "Buy And Sell Your Properties Here",
 }) => {
   const backGround = {
-    backgroundImage: `url("src/assets/BG.png")`,
+    backgroundImage: `url(${bgimage})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
   };

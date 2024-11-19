@@ -6,7 +6,7 @@ const NotFoundPage = () => {
   return (
     <section className="h-96 text-center flex flex-col justify-center items-center pt-20">
       <FaExclamationTriangle className="text-orange-600 text-6xl mb-4" />
-      <h1 className="text-6xl mb-4 font-bold">404 Not Found</h1>
+      <h1 className="text-2xl mb-4 font-bold md:text-6xl">404 Not Found</h1>
       <p className="text-xl mb-5">This Page does not exist</p>
       <Link
         to="/"

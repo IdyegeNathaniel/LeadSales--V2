@@ -36,7 +36,7 @@ const AddPropertyPage = ({ addPropertySubmit }) => {
 
     toast.success("Property listed successfully!!");
 
-    return navigate("/properties");
+    return navigate("/buy-properties");
   };
 
   return (

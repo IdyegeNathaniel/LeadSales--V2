@@ -9,7 +9,7 @@ const PropertyListings = ({ isHome = false }) => {
   useEffect(() => {
     const fetchProperties = async () => {
       const apiUrl = isHome
-        ? "https://properties-api-ruddy.vercel.app/api/properties?_limit=3"
+        ? "https://properties-api-ruddy.vercel.app/api/properties?limit=3"
         : "https://properties-api-ruddy.vercel.app/api/properties";
       try {
         const res = await fetch(apiUrl);
