@@ -55,7 +55,7 @@ const PropertyPage = ({ deleteProperty }) => {
 
     toast.success("Property deleted successfully..");
 
-    navigate("/properties");
+    navigate("/buy-properties");
   };
 
   return (
@@ -152,7 +152,7 @@ const PropertyPage = ({ deleteProperty }) => {
 };
 
 const propertyLoader = async ({ params }) => {
-  const res = await fetch(`/api/properties/${params.id}`);
+  const res = await fetch(`/api/buy-properties/${params.id}`);
   if (!res.ok) {
     throw new Error("Property Not Found");
   }
