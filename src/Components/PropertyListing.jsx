@@ -34,7 +34,7 @@ const PropertyListing = ({ property }) => {
             {property.location}
           </div>
           <Link
-            to={`/buy-properties/${property.id}`}
+            to={`/sell-properties/${property.id}`}
             className=" bg-orange-500 h-[36px] py-2 px-4 rounded-lg text-center text-white"
           >
             Read More
