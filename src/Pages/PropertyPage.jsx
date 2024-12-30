@@ -152,7 +152,7 @@ const PropertyPage = ({ deleteProperty }) => {
 };
 
 const propertyLoader = async ({ params }) => {
-  const res = await fetch(`/api/buy-properties/${params.id}`);
+  const res = await fetch(`/api/properties/${params.id}`);
   if (!res.ok) {
     throw new Error("Property Not Found");
   }
