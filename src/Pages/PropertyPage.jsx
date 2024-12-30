@@ -78,7 +78,10 @@ const PropertyPage = ({ deleteProperty }) => {
             {/* MAIN SECTION */}
 
             <main>
-              <div className="bg-white p-6 rounded-lg shadow-md text-center md:text-left">
+              <div
+                key={property.id}
+                className="bg-white p-6 rounded-lg shadow-md text-center md:text-left"
+              >
                 <div className="text-gray-500 mb-4">{property.type}</div>
                 <h1 className="text-3xl font-bold mb-4">{property.title}</h1>
                 <div className="text-gray-500 mb-4 flex align-middle justify-center md:justify-start">
@@ -87,7 +90,10 @@ const PropertyPage = ({ deleteProperty }) => {
                 </div>
               </div>
 
-              <div className="bg-white p-6 rounded-lg shadow-md mt-6">
+              <div
+                key={property.id}
+                className="bg-white p-6 rounded-lg shadow-md mt-6"
+              >
                 <h3 className="text-indigo-800 text-lg font-bold mb-6">
                   Property Description
                 </h3>
@@ -105,7 +111,10 @@ const PropertyPage = ({ deleteProperty }) => {
             {/* SIDE BAR */}
 
             <aside>
-              <div className="bg-white p-6 rounded-lg shadow-md">
+              <div
+                key={property.id}
+                className="bg-white p-6 rounded-lg shadow-md"
+              >
                 <h3 className="text-xl font-bold mb-6">Company Info</h3>
 
                 <h2 className="text-2xl">{property.company.name}</h2>
