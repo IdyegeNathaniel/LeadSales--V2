@@ -35,9 +35,9 @@ const Navbar = () => {
 
   return (
     <nav className={navbarClass}>
-      <div>
+      <NavLink to={"/"}>
         <img src={Logo} className="w-auto h-40" alt="nav-logo" />
-      </div>
+      </NavLink>
       <div className="hidden md:flex font-semibold">
         <ul className="flex">
           {["Home", "Buy Properties", "Sell Property"].map((item, index) => (
