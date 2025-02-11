@@ -10,6 +10,9 @@ const PropertyListing = ({ property }) => {
   }
 
   const handleShow = () => setShowFullDescription((prevState) => !prevState);
+
+    const expApi = "https://properties-api-ruddy.vercel.app/api";
+
   return (
     <div className="bg-white rounded-xl shadow-md relative">
       <div className="p-4">
@@ -34,7 +37,7 @@ const PropertyListing = ({ property }) => {
             {property.location}
           </div>
           <Link
-            to={`/api/properties/${property.id}`}
+            to={`${expApi}/properties/${property.id}`}
             onClick={() => window.scrollTo(0, 0)}
             className=" bg-orange-500 h-[36px] py-2 px-4 rounded-lg text-center text-white"
           >
