@@ -35,6 +35,7 @@ const PropertyListing = ({ property }) => {
           </div>
           <Link
             to={`/api/properties/${property.id}`}
+            onClick={() => window.scrollTo(0, 0)}
             className=" bg-orange-500 h-[36px] py-2 px-4 rounded-lg text-center text-white"
           >
             Read More

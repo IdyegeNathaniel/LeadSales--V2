@@ -54,6 +54,7 @@ const PropertyPage = ({ deleteProperty }) => {
     deleteProperty(propertyId);
 
     toast.success("Property deleted successfully..");
+    dispatch(clearError());
 
     navigate("/buy-properties");
   };
