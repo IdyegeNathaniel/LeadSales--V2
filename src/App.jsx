@@ -13,12 +13,11 @@ import AddJobPage from "./Pages/AddPropertyPage";
 import EditPropertyPage from "./Pages/EditPropertyPage";
 
 const App = () => {
-  // REST API LINK
-  const expApi = "https://properties-api-ruddy.vercel.app/api";
+
 
   //ADD NEW PROPERTY LISTING
   const addProperty = async (newProperty) => {
-    const res = await fetch(`${expApi}/properties`, {
+    const res = await fetch(`${VITE_API_BASE_URL}/properties`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -34,14 +33,14 @@ const App = () => {
   //DELETE PROPERTY LISTING
 
   const deleteProperty = async (id) => {
-    const res = await fetch(`${expApi}/properties/${id}`, {
+    const res = await fetch(`${VITE_API_BASE_URL}/properties/${id}`, {
       method: "DELETE",
     });
   };
 
   //UPDATE PROPERTY LISTING
   const updateProperty = async (property) => {
-    const res = await fetch(`${expApi}/properties/${property.id}`, {
+    const res = await fetch(`${VITE_API_BASE_URL}/properties/${property.id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaMapMarker } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
@@ -11,7 +11,23 @@ const PropertyListing = ({ property }) => {
 
   const handleShow = () => setShowFullDescription((prevState) => !prevState);
 
-    const expApi = "https://properties-api-ruddy.vercel.app/api";
+  const [properties, setProperties] = useState([]);
+
+    useEffect(() => {
+      const fetchProperties = async () => {
+        const apiUrl = "https://properties-api-ruddy.vercel.app/api/properties";
+        try {
+          const res = await fetch(apiUrl);
+          const data = await res.json();
+          console.log(data);
+          setProperties(data);
+        } catch (error) {
+          console.log("Error fetching data", error);
+        } 
+      };
+  
+      fetchProperties();
+    }, []);
 
   return (
     <div className="bg-white rounded-xl shadow-md relative">
