@@ -37,7 +37,7 @@ const PropertyListing = ({ property }) => {
             {property.location}
           </div>
           <Link
-            to={`${expApi}/properties/${property.id}`}
+            to={`/properties/${property.id}`}
             onClick={() => window.scrollTo(0, 0)}
             className=" bg-orange-500 h-[36px] py-2 px-4 rounded-lg text-center text-white"
           >
