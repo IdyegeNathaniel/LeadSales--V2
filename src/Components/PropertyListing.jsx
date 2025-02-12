@@ -13,21 +13,21 @@ const PropertyListing = ({ property }) => {
 
   const [properties, setProperties] = useState([]);
 
-    useEffect(() => {
-      const fetchProperties = async () => {
-        const apiUrl = "https://properties-api-ruddy.vercel.app/api/properties";
-        try {
-          const res = await fetch(apiUrl);
-          const data = await res.json();
-          console.log(data);
-          setProperties(data);
-        } catch (error) {
-          console.log("Error fetching data", error);
-        } 
-      };
-  
-      fetchProperties();
-    }, []);
+  useEffect(() => {
+    const fetchProperties = async () => {
+      const apiUrl = "/api/properties";
+      try {
+        const res = await fetch(apiUrl);
+        const data = await res.json();
+        console.log(data);
+        setProperties(data);
+      } catch (error) {
+        console.log("Error fetching data", error);
+      }
+    };
+
+    fetchProperties();
+  }, []);
 
   return (
     <div className="bg-white rounded-xl shadow-md relative">
